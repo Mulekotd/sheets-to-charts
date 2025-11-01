@@ -1,6 +1,12 @@
 {% extends "base.html.jinja" %} 
 
 {% block content %}
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/files.css') }}"
+/>
+
 <h1>Converta planilhas em gráficos</h1>
 <p>
   Transforme seus arquivos .xlsx ou .csv em gráficos incríveis. Faça o upload de
@@ -26,5 +32,10 @@
     <label for="file" class="file-label">Escolha um arquivo</label>
     <button type="submit" class="upload-button">Enviar</button>
   </form>
+  
+  <!-- Dynamic file preview -->
 </div>
+
+<script src="{{ url_for('static', filename='js/file-preview.js') }}"></script>
+
 {% endblock %}

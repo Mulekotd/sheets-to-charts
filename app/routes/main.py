@@ -4,14 +4,6 @@ from app.utils.file_processor import process_uploaded_file
 
 main_bp = Blueprint('main', __name__)
 
-@main_bp.route('/favicon.ico')
-def favicon():
-    return send_from_directory(
-        os.path.join(current_app.root_path, 'static'),
-        'favicon.ico', 
-        mimetype='image/vnd.microsoft.icon'
-    )
-
 @main_bp.route('/')
 def home():
     return render_template('index.html.jinja')
