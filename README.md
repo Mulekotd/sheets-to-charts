@@ -1,81 +1,142 @@
-# Sheets to Charts
+# ExcelGraphicx
 
-Sheets to Charts is a web application that allows you to convert .xlsx and .csv files into interactive charts.
+ExcelGraphicx is a web application that allows you to convert .xlsx and .csv files into interactive and customizable charts.
 
 ## Table of Contents
 
 - [Overview](#overview)
-- [Screenshots](#screenshots)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation and Setup](#installation-and-setup)
+- [Project Structure](#project-structure)
 - [Usage](#usage)
+- [Configuration](#configuration)
 - [License](#license)
 - [Feedback and Contributions](#feedback-and-contributions)
 
 ## Overview
 
-Sheets to Charts is a user-friendly tool for data visualization. It simplifies the process of creating charts from Excel (.xlsx) and CSV files. With Sheets to Charts, you can quickly turn your data into insightful visualizations without the need for complex software or coding.
+ExcelGraphicx is a user-friendly tool for data visualization. It simplifies the process of creating charts from Excel (.xlsx) and CSV files. With ExcelGraphicx, you can quickly turn your data into insightful visualizations with a modern and intuitive interface.
 
 ## Features
 
-- **Easy File Upload:** Simply upload your .xlsx or .csv files to get started.
-- **Intuitive Interface:** Easily select your data and axis for chart creation.
-- **Interactive Charts:** View and interact with your charts directly in the browser.
-- **Export Options:** Download your charts for presentations and reports.
-- **No Coding Required:** No coding or technical skills needed.
+- **Easy File Upload:** Simply upload your .xlsx or .csv files to get started
+- **Multiple Chart Types:** Choose from bar, line, radar, pie, and doughnut charts
+- **Customizable:** Change colors, formats, and axis labels
+- **Interactive Charts:** View and interact with your charts directly in the browser
+- **Format Options:** Apply currency, percentage, and unit formatting to axes
+- **Print-Friendly:** Export your charts directly to PDF via browser print
+- **No Coding Required:** No coding or technical skills needed
 
 ## Requirements
 
-Before using this project, ensure that you have the following software installed in your development environment:
+Before using this project, ensure that you have the following software installed:
 
-* **Python (3.6 or later):** You can download Python from [the official Python website.](https://www.python.org/downloads/)
+- **Python 3.11 or later:** Download from [python.org](https://www.python.org/downloads/)
 
 ![python](https://logosmarcas.net/wp-content/uploads/2021/10/Python-Logo.png)
 
 ## Installation and Setup
 
-**1 - Clone or Download the Repository:**
-
-Clone this repository to your local development environment or download the source code.
+**1. Clone the Repository:**
 
 ```bash
-git clone https://github.com/Mulekotd/sheets-to-charts.git
-
-cd sheets-to-charts
+git clone https://github.com/Mulekotd/excelgraphicx.git
+cd excelgraphicx
 ```
 
-**2 - Install Dependencies with pip:**
-
-Open a terminal and run:
+**2. Create Virtual Environment:**
 
 ```bash
-pip install flask pyChart.JS pandas python-decouple
+# Create virtual environment
+python -m venv venv
+
+# Activate (Windows)
+venv\Scripts\activate
+
+# Activate (Linux/Mac)
+source venv/bin/activate
 ```
 
-**3 - Configure the environment variable:**
+**3. Install Dependencies:**
 
-Example .env file:
-
-```.env
-FLASK_SECRET_KEY=your_key_here
+```bash
+pip install -r requirements.txt
 ```
 
-**4 - Start in your local machine:**
+**4. Configure Environment Variables:**
 
-```psql
-python .\main.py
+Create a `.env` file in the project root:
+
+```env
+FLASK_SECRET_KEY=your_secure_secret_key_here
+```
+
+**5. Run the Application:**
+
+```bash
+python run.py
+```
+
+## Project Structure
+
+```
+excelgraphicx/
+│   .env
+│   .gitignore
+│   requirements.txt
+│   LICENSE
+│   README.md
+│   run.py
+│
+├───app/
+│   │   __init__.py
+│   │
+│   ├───routes/
+│   │   │   __init__.py
+│   │   │   main.py
+│   │   │   charts.py
+│   │
+│   ├───utils/
+│   │   │   __init__.py
+│   │   │   chart_creator.py
+│   │   │   file_processor.py
+│   │
+│   ├───static/
+│   │   │   favicon.ico
+│   │   │
+│   │   ├───css/
+│   │   │       styles.css
+│   │   │
+│   │   └───js/
+│   │           chart-controls.js
+│   │
+│   └───templates/
+│           base.html.jinja
+│           index.html.jinja
+│           select_columns.html.jinja
+│           dashboards.html.jinja
+│
+└───tests/
+        __init__.py
+        test_routes.py
+        test_utils.py
 ```
 
 ## Usage
 
-1. Visit the http://localhost:5000/.
-2. Click the "Upload" button on the home page.
-3. Select your .xlsx or .csv file.
-4. Choose your data and axis settings.
-5. Click "Generate Chart" to create your visualization.
-6. Explore and interact with your chart.
-7. Download the chart as .PDF.
+1. Start the application (see [Installation](#installation-and-setup))
+2. Visit `http://localhost:5000/` and have fun!
+
+## Configuration
+
+### Environment Variables
+
+Create a `.env` file in the project root with:
+
+```env
+FLASK_SECRET_KEY=your_secure_secret_key_here
+```
 
 ## License
 
@@ -85,4 +146,4 @@ This project is open-source and is provided under the MIT License. You are free 
 
 ## Feedback and Contributions
 
-We welcome feedback, suggestions, and contributions from the community. If you have ideas for improvements or encounter any issues, please don't hesitate to [open an issue](https://github.com/Mulekotd/sheets-to-charts/issues) on GitHub.
+We welcome feedback, suggestions, and contributions from the community. If you have ideas for improvements or encounter any issues, please don't hesitate to [open an issue](https://github.com/Mulekotd/excelgraphicx/issues) on GitHub.

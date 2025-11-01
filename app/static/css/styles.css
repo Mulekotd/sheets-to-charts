@@ -1,0 +1,258 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo para o footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Estilo para o conteúdo */
+.content {
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+  position: relative;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  background: repeating-linear-gradient(
+    45deg,
+    #eee,
+    #eee 10px,
+    #ccc 10px,
+    #ccc 20px
+  );
+  margin: 20px auto;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: #f8f9fa;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  border: none;
+  height: calc(57px - 17px);
+  margin-left: 10px;
+}
+
+.file-label:hover {
+  background-color: #ccc;
+}
+
+.upload-button {
+  background-color: #ac1818;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+/* Estilo para a seta no botão de enviar */
+.upload-button::after {
+  content: "\2192";
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+/* Estilo para a div de contêiner do formulário */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+.chart-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.chart-label {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.chart-select {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.chart-button {
+  background-color: #ac1818;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.chart-button:hover {
+  background-color: #cc0000;
+}
+
+.panel-controls {
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.panel-controls select {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.panel-controls input[type="color"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+
+.panel-controls .change-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-controls label {
+  font-size: 16px;
+  color: #333;
+  margin-left: 4px;
+}
+
+.panel-controls button {
+  background-color: #ac1818;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.panel-controls button:hover {
+  background-color: #cc0000;
+}
+
+/* Estilo para elementos a serem impressos */
+@media print {
+  .print {
+    display: block;
+  }
+}
+
+@media print {
+  .ignore-print {
+    display: none;
+  }
+}

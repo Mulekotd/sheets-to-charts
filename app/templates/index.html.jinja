@@ -1,0 +1,30 @@
+{% extends "base.html.jinja" %} 
+
+{% block content %}
+<h1>Converta planilhas em gráficos</h1>
+<p>
+  Transforme seus arquivos .xlsx ou .csv em gráficos incríveis. Faça o upload de
+  seus documentos e crie visualizações de dados impressionantes em questão de
+  segundos.
+</p>
+
+<div class="upload-container">
+  <form
+    action="/process_file"
+    method="post"
+    enctype="multipart/form-data"
+    class="file-upload-form"
+  >
+    <input
+      type="file"
+      name="file"
+      id="file"
+      accept=".xlsx, .csv"
+      class="file-input"
+      required
+    />
+    <label for="file" class="file-label">Escolha um arquivo</label>
+    <button type="submit" class="upload-button">Enviar</button>
+  </form>
+</div>
+{% endblock %}

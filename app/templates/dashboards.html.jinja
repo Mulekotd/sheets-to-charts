@@ -1,0 +1,57 @@
+{% extends "base.html.jinja" %} 
+
+{% block content %}
+<h1 class="ignore-print">Painel</h1>
+<div class="ignore-print panel-controls">
+  <div>
+    <select id="chart-type-select">
+      <option value="bar">Barra</option>
+      <option value="line">Linha</option>
+      <option value="radar">Radar</option>
+      <option value="pie">Setores</option>
+      <option value="doughnut">Rosquinha</option>
+    </select>
+  </div>
+
+  <div class="change-color">
+    <input type="color" id="bar-color-picker" value="#ff5733" />
+    <label for="bar-color-picker">Cor do Gráfico</label>
+  </div>
+
+  <select id="x-axis-select">
+    <option value="default">Eixo X</option>
+    <option value="currency">Moeda</option>
+    <option value="percentage">Porcentagem</option>
+    <option value="length_cm">Unidade de Medida (cm)</option>
+    <option value="volume_cm3">Unidade de Volume (cm³)</option>
+  </select>
+
+  <select id="y-axis-select">
+    <option value="default">Eixo Y</option>
+    <option value="currency">Moeda</option>
+    <option value="percentage">Porcentagem</option>
+    <option value="length_cm">Unidade de Medida (cm)</option>
+    <option value="volume_cm3">Unidade de Volume (cm³)</option>
+  </select>
+
+  <button onclick="updateChartFormat();">Aplicar Formatação</button>
+  <button onclick="updateBarColor();">Alterar Cor da Barra</button>
+  <button onclick="updateChartType();">Alterar Tipo de Gráfico</button>
+  <button onclick="window.print()">Imprimir</button>
+</div>
+
+<div class="print">
+  <canvas id="chart"></canvas>
+</div>
+
+<script src="{{ url_for('static', filename='js/chart-controls.js') }}"></script>
+
+<script>
+  const chartData = {
+    type: "{{ chart.type }}",
+    data: {{ chart.data | tojson | safe }},
+  };
+  
+  initChart(chartData);
+</script>
+{% endblock %}
