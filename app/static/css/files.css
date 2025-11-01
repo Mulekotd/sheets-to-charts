@@ -9,7 +9,6 @@
   border: 3px dashed #4caf50;
 }
 
-/* Container do preview */
 .file-preview {
   background-color: #fff;
   border: 2px solid #ddd;
@@ -31,7 +30,6 @@
   }
 }
 
-/* Header do preview */
 .file-preview-header {
   display: flex;
   justify-content: space-between;

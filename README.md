@@ -1,6 +1,6 @@
-# ExcelGraphicx
+# Graphicx
 
-ExcelGraphicx is a web application that allows you to convert .xlsx and .csv files into interactive and customizable charts.
+Graphicx is a web application that allows you to convert .xlsx and .csv files into interactive and customizable charts.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ ExcelGraphicx is a web application that allows you to convert .xlsx and .csv fil
 
 ## Overview
 
-ExcelGraphicx is a user-friendly tool for data visualization. It simplifies the process of creating charts from Excel (.xlsx) and CSV files. With ExcelGraphicx, you can quickly turn your data into insightful visualizations with a modern and intuitive interface.
+Graphicx is a user-friendly tool for data visualization. It simplifies the process of creating charts from Excel (.xlsx) and CSV files. With Graphicx, you can quickly turn your data into insightful visualizations with a modern and intuitive interface.
 
 ## Features
 
@@ -41,8 +41,8 @@ Before using this project, ensure that you have the following software installed
 **1. Clone the Repository:**
 
 ```bash
-git clone https://github.com/Mulekotd/excelgraphicx.git
-cd excelgraphicx
+git clone https://github.com/Mulekotd/Graphicx.git
+cd Graphicx
 ```
 
 **2. Create Virtual Environment:**
@@ -81,7 +81,7 @@ python run.py
 ## Project Structure
 
 ```
-excelgraphicx/
+Graphicx/
 │   .env
 │   .gitignore
 │   requirements.txt
@@ -146,4 +146,4 @@ This project is open-source and is provided under the MIT License. You are free 
 
 ## Feedback and Contributions
 
-We welcome feedback, suggestions, and contributions from the community. If you have ideas for improvements or encounter any issues, please don't hesitate to [open an issue](https://github.com/Mulekotd/excelgraphicx/issues) on GitHub.
+We welcome feedback, suggestions, and contributions from the community. If you have ideas for improvements or encounter any issues, please don't hesitate to [open an issue](https://github.com/Mulekotd/Graphicx/issues) on GitHub.

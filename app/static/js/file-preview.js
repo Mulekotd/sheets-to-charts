@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function formatFileSize(bytes) {
     if (bytes === 0) return "0 Bytes";
+
     const k = 1024;
     const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const day = String(date.getDate()).padStart(2, "0");
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
+
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
 
@@ -24,9 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function createPreview(file) {
     const existingPreview = document.querySelector(".file-preview");
 
-    if (existingPreview) {
+    if (existingPreview)
       existingPreview.remove();
-    }
 
     const extension = file.name.split(".").pop().toLowerCase();
     const size = formatFileSize(file.size);
@@ -72,9 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   fileInput.addEventListener("change", function (e) {
-    if (this.files && this.files[0]) {
+    if (this.files && this.files[0])
       createPreview(this.files[0]);
-    }
   });
 
   uploadContainer.addEventListener("dragover", function (e) {
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (files.length > 0) {
       const file = files[0];
+      
       const extension = file.name.split(".").pop().toLowerCase();
 
       if (extension === "csv" || extension === "xlsx" || extension === "xls") {

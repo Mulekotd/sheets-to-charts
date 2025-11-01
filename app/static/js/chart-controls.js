@@ -120,6 +120,7 @@ function updateChartType() {
     chartType === "polarArea"
   ) {
     generateRandomColors();
+    
     document.getElementById("bar-color-picker").disabled = true;
 
     // Remove axes for circular charts
@@ -165,6 +166,7 @@ function updateChartType() {
         x: index,
         y: chart.data.datasets[0].data[index],
       }));
+
       chart.data.datasets[0].data = scatterData;
     }
   } else if (previousType === "scatter" || previousType === "bubble") {
@@ -174,6 +176,7 @@ function updateChartType() {
         (point) => point.y
       );
     }
+
     chart.data.datasets[0].showLine = chartType === "line";
   }
 
@@ -328,15 +331,10 @@ function addTrendline() {
   chart.update();
 }
 
-// Enhanced print function
 window.addEventListener("beforeprint", () => {
-  if (chart) {
-    chart.resize(600, 400);
-  }
+  if (chart) chart.resize(600, 400);
 });
 
 window.addEventListener("afterprint", () => {
-  if (chart) {
-    chart.resize();
-  }
+  if (chart) chart.resize();
 });
