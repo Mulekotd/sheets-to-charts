@@ -112,7 +112,7 @@ sheets-to-charts/
 
 ## Usage
 
-1. Start the application (see [Installation](#installation-and-setup))
+1. Start the application (see [Installation and Setup](#installation-and-setup))
 2. Visit `http://localhost:5000/` and have fun!
 
 ## License
