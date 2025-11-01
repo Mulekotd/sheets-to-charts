@@ -1,4 +1,4 @@
-# Graphicx
+# Sheets To Charts
 
 Graphicx is a web application that allows you to convert .xlsx and .csv files into interactive and customizable charts.
 
@@ -10,7 +10,6 @@ Graphicx is a web application that allows you to convert .xlsx and .csv files in
 - [Installation and Setup](#installation-and-setup)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
-- [Configuration](#configuration)
 - [License](#license)
 - [Feedback and Contributions](#feedback-and-contributions)
 
@@ -41,8 +40,8 @@ Before using this project, ensure that you have the following software installed
 **1. Clone the Repository:**
 
 ```bash
-git clone https://github.com/Mulekotd/Graphicx.git
-cd Graphicx
+git clone https://github.com/Mulekotd/sheets-to-charts.git
+cd sheets-to-charts/
 ```
 
 **2. Create Virtual Environment:**
@@ -68,7 +67,7 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root:
 
-```env
+```bash
 FLASK_SECRET_KEY=your_secure_secret_key_here
 ```
 
@@ -80,63 +79,41 @@ python run.py
 
 ## Project Structure
 
-```
-Graphicx/
-│   .env
-│   .gitignore
-│   requirements.txt
-│   LICENSE
-│   README.md
-│   run.py
-│
-├───app/
-│   │   __init__.py
-│   │
-│   ├───routes/
-│   │   │   __init__.py
-│   │   │   main.py
-│   │   │   charts.py
-│   │
-│   ├───utils/
-│   │   │   __init__.py
-│   │   │   chart_creator.py
-│   │   │   file_processor.py
-│   │
-│   ├───static/
-│   │   │   favicon.ico
-│   │   │
-│   │   ├───css/
-│   │   │       styles.css
-│   │   │
-│   │   └───js/
-│   │           chart-controls.js
-│   │
-│   └───templates/
-│           base.html.jinja
-│           index.html.jinja
-│           select_columns.html.jinja
-│           dashboards.html.jinja
-│
-└───tests/
-        __init__.py
-        test_routes.py
-        test_utils.py
+```bash
+sheets-to-charts/
+├── LICENSE
+├── README.md
+├── app
+│   ├── __init__.py
+│   ├── routes
+│   │   ├── __init__.py
+│   │   ├── charts.py
+│   │   └── main.py
+│   ├── static
+│   │   ├── css
+│   │   │   ├── files.css
+│   │   │   └── styles.css
+│   │   ├── favicon.ico
+│   │   └── js
+│   │       ├── chart-controls.js
+│   │       └── file-preview.js
+│   ├── templates
+│   │   ├── base.html.jinja
+│   │   ├── dashboards.html.jinja
+│   │   ├── index.html.jinja
+│   │   └── select_columns.html.jinja
+│   └── utils
+│       ├── __init__.py
+│       ├── chart_creator.py
+│       └── file_processor.py
+├── requirements.txt
+└── run.py
 ```
 
 ## Usage
 
 1. Start the application (see [Installation](#installation-and-setup))
 2. Visit `http://localhost:5000/` and have fun!
-
-## Configuration
-
-### Environment Variables
-
-Create a `.env` file in the project root with:
-
-```env
-FLASK_SECRET_KEY=your_secure_secret_key_here
-```
 
 ## License
 
@@ -146,4 +123,4 @@ This project is open-source and is provided under the MIT License. You are free 
 
 ## Feedback and Contributions
 
-We welcome feedback, suggestions, and contributions from the community. If you have ideas for improvements or encounter any issues, please don't hesitate to [open an issue](https://github.com/Mulekotd/Graphicx/issues) on GitHub.
+We welcome feedback, suggestions, and contributions from the community. If you have ideas for improvements or encounter any issues, please don't hesitate to [open an issue](https://github.com/Mulekotd/sheets-to-charts/issues) on GitHub.
